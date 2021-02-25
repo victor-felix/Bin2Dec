@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { Typography } from "@material-ui/core";
 
 const index = () => {
   const [binary, setBinary] = useState(null);
@@ -10,6 +11,9 @@ const index = () => {
 
   return (
     <>
+      <Typography variant="h6" color="primary">
+        Binary2Decimal
+      </Typography>
       <input type="text" onChange={(event) => setBinary(event.target.value)} />
       <button onClick={() => converter()}>Converter</button>
       <div>Decimal: {decimal}</div>
